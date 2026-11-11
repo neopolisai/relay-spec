@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/neopolisai/relay-prototype/schema/relay.context-package.v1.json",
+  "$id": "https://relayto.ai/schema/relay.context-package.v1.json",
   "title": "Relay context package, v1",
   "description": "What an owner's agent (Claude, ChatGPT, any assistant) produces when the owner says 'share this with them so that…', and what the audience's agent loads in order to represent the owner's intent faithfully. It carries the context and also the intent, the reasoning, the judgement, and the process behind it. Every value records whether the owner said it or a model interpreted it. Conforms to SORT v0.1: owned (approved only by the owner), typed (this schema), revocable (grant + expiry), shareable (one link, one fetch).",
   "type": "object",
@@ -30,7 +30,7 @@
     },
     "title": {
       "type": "string",
-      "description": "Short name shown in the recipient's list."
+      "description": "Short name for the work itself, e.g. Investor deck, shown in lists. Never the purpose or the person: lists show those next to it, and the same work keeps the same title for every audience."
     },
     "summary": {
       "type": "string",
@@ -1287,7 +1287,8 @@
           "enum": [
             "live",
             "snapshot"
-          ]
+          ],
+          "description": "Always treated as live: people with access read the latest approved version. snapshot is accepted for older packages and saved as live."
         },
         "expiresAt": {
           "type": [

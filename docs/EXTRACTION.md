@@ -122,7 +122,7 @@ Then build the context as deep as you can for that reader's agent to understand,
    Each "no" is a gap: fill it from what you have, ask the owner, or put the topic on `mustAskOwner`.
 6. **Draft the rules and rehearse.** For each likely question, write the answer their agent would give from this package alone. If you can't, either the package is missing something (add it or ask) or the topic belongs on `mustAskOwner`.
 7. **Show the owner what you grabbed:** the sources and what each contributed, your restatement, each inference, and the rehearsed answers. Never list what you left out.
-8. **Publish a draft** with `relay_publish_draft`, read the quality notes it returns, fix what you can with a new draft, and give the owner the review link. You cannot approve.
+8. **Publish a draft** with `relay_publish_draft`, read the quality notes it returns, fix what you can with a new draft, show the owner what will go, and on their yes send it with `relay_send`, or give them the review link if they'd rather check it there.
 
 ## Not making things up
 
