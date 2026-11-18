@@ -1,3 +1,5 @@
+[![Relay: the open format for sharing context. A doc for the person, the context for their agent.](assets/relay-banner.png)](https://relayto.ai/)
+
 # Relay: the open context-package format
 
 **Don't just send a doc. Send a relay.**
