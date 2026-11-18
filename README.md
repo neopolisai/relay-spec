@@ -8,10 +8,14 @@ Their AI will probably read your doc before they do. With a relay, your agent gi
 
 This repository holds the open parts of [Relay](https://relayto.ai): the `relay.context-package.v1` format, the `/relay` skill your agent follows, the extraction standard, and setup steps for each agent. The Relay service at relayto.ai (links, sign-in, permissions, read receipts, versions, revocation, the question loop and the web app) is a product by [Neopolis](https://neopolis.ai) and isn't in this repository.
 
-```
-relay {what} to {who} for {why}
 
+**/relay {what} to {who} for {why}/**
+
+
+```
 relay the pilot proposal to Jordan at Northstar for sign-off by Friday
+```
+```
 ask Jordan to relay me the pilot requirements for scoping
 ```
 
