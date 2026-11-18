@@ -9,6 +9,9 @@ This repository holds the open parts of [Relay](https://relayto.ai): the `relay.
 ```
 relay {what} to {who} for {why}
 
+```
+
+```
 relay the pilot proposal to Jordan at Northstar for sign-off by Friday
 ask Jordan to relay me the pilot requirements for scoping
 ```
