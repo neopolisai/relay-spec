@@ -532,7 +532,7 @@
     },
     "content": {
       "type": "object",
-      "description": "What people see when they open the relay, as opposed to the context, which is for their agent. A page written in Markdown (a one-pager, a proposal, a resume), the first attached PDF (a deck or document), or both. With content, the reader's page shows the content and a button to share the relay with their agent. The context, reasoning and rules go to the agent and are not shown on the page. Without content, the page shows the summary and context as before.",
+      "description": "What people see when they open the relay, as opposed to the context, which is for their agent. A page written in Markdown (a one-pager, a proposal, a resume), the first attached PDF (a deck or document), or both. With content, the reader's page shows the content and a button to share the relay with their agent. The context, reasoning and rules go to the agent and are not shown on the page. Relay shares a relay only when it has content, so people always have something to read.",
       "properties": {
         "page": {
           "type": "object",

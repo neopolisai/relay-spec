@@ -1,487 +1,492 @@
 {
-    "schema": "relay.context-package.v1",
-    "id": "pkg_launch_jordan",
-    "version": 1,
-    "depth": "full",
-    "owner": {
-        "name": "Ana",
-        "id": "owner_ana",
-        "contact": "Message Ana directly for anything marked must-ask."
+  "schema": "relay.context-package.v1",
+  "id": "pkg_launch_jordan",
+  "version": 1,
+  "depth": "full",
+  "owner": {
+    "name": "Ana",
+    "id": "owner_ana",
+    "contact": "Message Ana directly for anything marked must-ask."
+  },
+  "approvedBy": "Ana",
+  "approvedAt": "2026-10-19T18:00:00Z",
+  "producedBy": {
+    "client": "claude",
+    "model": "claude-opus-5-5",
+    "method": "mixed",
+    "sessionRef": "conv_8f2"
+  },
+  "audience": {
+    "name": "Jordan",
+    "relationship": "co-founder",
+    "role": "Leads design-partner outreach and launch messaging (proposed)",
+    "knowsAlready": [
+      "The Relay concept and the prototype",
+      "The Navii product history",
+      "The three candidate partner types"
+    ],
+    "caresAbout": [
+      "Not overpromising to partners",
+      "A launch they can explain in one sentence",
+      "Owning outreach without owning engineering risk"
+    ],
+    "likelyQuestions": [
+      "Why three partners and not ten?",
+      "What exactly will work by the time we invite them?",
+      "Is the responsibility split fixed?",
+      "When do we launch?"
+    ],
+    "register": "Direct, peer to peer, skip the pitch."
+  },
+  "intent": {
+    "statement": "Share our Navii launch plan with Jordan so we can agree on responsibilities. Let them suggest changes.",
+    "outcome": {
+      "text": "Leave the planning conversation with an agreed audience, a testable first workflow, named owners, and a review point.",
+      "provenance": "stated"
     },
-    "approvedBy": "Ana",
-    "approvedAt": "2026-10-19T18:00:00Z",
-    "producedBy": {
-        "client": "claude",
-        "model": "claude-opus-5-5",
-        "method": "mixed",
-        "sessionRef": "conv_8f2"
+    "successLooksLike": [
+      {
+        "text": "Jordan can explain the launch purpose in their own words without a briefing.",
+        "provenance": "confirmed"
+      },
+      {
+        "text": "Responsibilities are agreed or explicitly changed, not assumed.",
+        "provenance": "stated"
+      }
+    ],
+    "ask": {
+      "type": "agree",
+      "detail": {
+        "text": "Agree on, or change, the responsibility split and the three decisions listed under Decisions.",
+        "provenance": "confirmed"
+      },
+      "byWhen": "Before partner invitations go out"
     },
-    "audience": {
-        "name": "Jordan",
-        "relationship": "co-founder",
-        "role": "Leads design-partner outreach and launch messaging (proposed)",
-        "knowsAlready": [
-            "The Relay concept and the prototype",
-            "The Navii product history",
-            "The three candidate partner types"
-        ],
-        "caresAbout": [
-            "Not overpromising to partners",
-            "A launch they can explain in one sentence",
-            "Owning outreach without owning engineering risk"
-        ],
-        "likelyQuestions": [
-            "Why three partners and not ten?",
-            "What exactly will work by the time we invite them?",
-            "Is the responsibility split fixed?",
-            "When do we launch?"
-        ],
-        "register": "Direct, peer to peer, skip the pitch."
+    "whyNow": {
+      "text": "Partner invitations depend on knowing who owns outreach and what will work by then.",
+      "provenance": "corrected",
+      "agentReading": "There is a fixed launch date coming up."
     },
-    "intent": {
-        "statement": "Share our Navii launch plan with Jordan so we can agree on responsibilities. Let them suggest changes.",
-        "outcome": {
-            "text": "Leave the planning conversation with an agreed audience, a testable first workflow, named owners, and a review point.",
-            "provenance": "stated"
-        },
-        "successLooksLike": [
-            {
-                "text": "Jordan can explain the launch purpose in their own words without a briefing.",
-                "provenance": "confirmed"
-            },
-            {
-                "text": "Responsibilities are agreed or explicitly changed, not assumed.",
-                "provenance": "stated"
-            }
-        ],
-        "ask": {
-            "type": "agree",
-            "detail": {
-                "text": "Agree on, or change, the responsibility split and the three decisions listed under Decisions.",
-                "provenance": "confirmed"
-            },
-            "byWhen": "Before partner invitations go out"
-        },
-        "whyNow": {
-            "text": "Partner invitations depend on knowing who owns outreach and what will work by then.",
-            "provenance": "corrected",
-            "agentReading": "There is a fixed launch date coming up."
-        },
-        "whyThisAudience": {
-            "text": "Jordan owns the partner relationships and the launch narrative. The plan doesn't work without their agreement.",
-            "provenance": "confirmed"
-        },
-        "interests": [
-            {
-                "text": "Learn whether the handoff itself is useful before building discovery or matching.",
-                "provenance": "stated"
-            },
-            {
-                "text": "Keep engineering scope small enough that one person can ship it.",
-                "provenance": "confirmed"
-            }
-        ],
-        "priorities": [
-            {
-                "text": "1. An honest first launch that teaches us something",
-                "provenance": "stated"
-            },
-            {
-                "text": "2. Clear ownership",
-                "provenance": "stated"
-            },
-            {
-                "text": "3. Speed",
-                "provenance": "confirmed"
-            }
-        ],
-        "nonGoals": [
-            {
-                "text": "Autonomous negotiation, cross-network matching, or any action that commits either party.",
-                "provenance": "stated"
-            },
-            {
-                "text": "An external launch date.",
-                "provenance": "stated"
-            }
-        ]
+    "whyThisAudience": {
+      "text": "Jordan owns the partner relationships and the launch narrative. The plan doesn't work without their agreement.",
+      "provenance": "confirmed"
     },
-    "interpretation": {
-        "restatement": "You want Jordan to agree on who owns what for a small design-partner launch, and you want them to push back where the plan overstates what we can deliver.",
-        "restatementVerdict": "confirmed",
-        "inferences": [
-            {
-                "id": "inf1",
-                "reading": "There is a fixed launch date coming up.",
-                "basis": "'launch plan' plus the urgency in the conversation",
-                "confidence": "medium",
-                "verdict": "corrected",
-                "correction": "No external date. The trigger is the partner invitations, not a calendar date."
-            },
-            {
-                "id": "inf2",
-                "reading": "The responsibility split is a proposal Jordan can change.",
-                "basis": "'so we can agree' and 'let them suggest changes'",
-                "confidence": "high",
-                "verdict": "confirmed"
-            },
-            {
-                "id": "inf3",
-                "reading": "Ana would accept fewer than three partners if each one brings a real handoff.",
-                "basis": "Priority on learning over volume",
-                "confidence": "low",
-                "verdict": "rejected",
-                "correction": "Three is the minimum to see a pattern. Fewer is not acceptable."
-            }
+    "interests": [
+      {
+        "text": "Learn whether the handoff itself is useful before building discovery or matching.",
+        "provenance": "stated"
+      },
+      {
+        "text": "Keep engineering scope small enough that one person can ship it.",
+        "provenance": "confirmed"
+      }
+    ],
+    "priorities": [
+      {
+        "text": "1. An honest first launch that teaches us something",
+        "provenance": "stated"
+      },
+      {
+        "text": "2. Clear ownership",
+        "provenance": "stated"
+      },
+      {
+        "text": "3. Speed",
+        "provenance": "confirmed"
+      }
+    ],
+    "nonGoals": [
+      {
+        "text": "Autonomous negotiation, cross-network matching, or any action that commits either party.",
+        "provenance": "stated"
+      },
+      {
+        "text": "An external launch date.",
+        "provenance": "stated"
+      }
+    ]
+  },
+  "interpretation": {
+    "restatement": "You want Jordan to agree on who owns what for a small design-partner launch, and you want them to push back where the plan overstates what we can deliver.",
+    "restatementVerdict": "confirmed",
+    "inferences": [
+      {
+        "id": "inf1",
+        "reading": "There is a fixed launch date coming up.",
+        "basis": "'launch plan' plus the urgency in the conversation",
+        "confidence": "medium",
+        "verdict": "corrected",
+        "correction": "No external date. The trigger is the partner invitations, not a calendar date."
+      },
+      {
+        "id": "inf2",
+        "reading": "The responsibility split is a proposal Jordan can change.",
+        "basis": "'so we can agree' and 'let them suggest changes'",
+        "confidence": "high",
+        "verdict": "confirmed"
+      },
+      {
+        "id": "inf3",
+        "reading": "Ana would accept fewer than three partners if each one brings a real handoff.",
+        "basis": "Priority on learning over volume",
+        "confidence": "low",
+        "verdict": "rejected",
+        "correction": "Three is the minimum to see a pattern. Fewer is not acceptable."
+      }
+    ],
+    "clarifications": [
+      {
+        "question": "Is Jordan allowed to see that engineering capacity is the main constraint?",
+        "answer": "Yes, they should know."
+      },
+      {
+        "question": "Should their agent be able to agree to a different split on your behalf?",
+        "answer": "No. It can explain and collect their proposal, and I decide."
+      }
+    ],
+    "openAmbiguities": [
+      "Whether the review point is after the first partner session or after all three."
+    ]
+  },
+  "context": {
+    "subject": "Navii launch",
+    "sections": [
+      {
+        "id": "itm_resp",
+        "title": "Collaboration and proposed responsibilities",
+        "purpose": "This is the thing to agree on.",
+        "body": "My proposed split is that Ana owns product and engineering, while Jordan owns design-partner outreach and helps shape the launch narrative. These responsibilities need Jordan's agreement.",
+        "claims": [
+          {
+            "id": "c1",
+            "text": "Ana owns product and engineering.",
+            "provenance": "stated",
+            "confidence": "high",
+            "visibility": "shareable"
+          },
+          {
+            "id": "c2",
+            "text": "Jordan owns design-partner outreach and launch narrative, pending their agreement.",
+            "provenance": "stated",
+            "confidence": "medium",
+            "visibility": "shareable"
+          }
         ],
-        "clarifications": [
-            {
-                "question": "Is Jordan allowed to see that engineering capacity is the main constraint?",
-                "answer": "Yes, they should know."
-            },
-            {
-                "question": "Should their agent be able to agree to a different split on your behalf?",
-                "answer": "No. It can explain and collect their proposal, and I decide."
-            }
+        "version": 2,
+        "updatedAt": "2026-10-19T17:40:00Z",
+        "visibility": "shareable"
+      },
+      {
+        "id": "itm_approach",
+        "title": "The proposed approach and why",
+        "purpose": "Explains why the launch is three partners and explicit links.",
+        "body": "Start with three design partners who each bring one real handoff. Begin with explicit link sharing, because the sender already knows the audience and the outcome.",
+        "claims": [
+          {
+            "id": "c3",
+            "text": "Three design partners, each with one real handoff.",
+            "provenance": "stated",
+            "visibility": "shareable"
+          },
+          {
+            "id": "c4",
+            "text": "Explicit link sharing comes before discovery or matching.",
+            "provenance": "confirmed",
+            "visibility": "shareable"
+          }
         ],
-        "openAmbiguities": [
-            "Whether the review point is after the first partner session or after all three."
-        ]
-    },
-    "context": {
-        "subject": "Navii launch",
-        "sections": [
-            {
-                "id": "itm_resp",
-                "title": "Collaboration and proposed responsibilities",
-                "purpose": "This is the thing to agree on.",
-                "body": "My proposed split is that Ana owns product and engineering, while Jordan owns design-partner outreach and helps shape the launch narrative. These responsibilities need Jordan's agreement.",
-                "claims": [
-                    {
-                        "id": "c1",
-                        "text": "Ana owns product and engineering.",
-                        "provenance": "stated",
-                        "confidence": "high",
-                        "visibility": "shareable"
-                    },
-                    {
-                        "id": "c2",
-                        "text": "Jordan owns design-partner outreach and launch narrative, pending their agreement.",
-                        "provenance": "stated",
-                        "confidence": "medium",
-                        "visibility": "shareable"
-                    }
-                ],
-                "version": 2,
-                "updatedAt": "2026-10-19T17:40:00Z",
-                "visibility": "shareable"
-            },
-            {
-                "id": "itm_approach",
-                "title": "The proposed approach and why",
-                "purpose": "Explains why the launch is three partners and explicit links.",
-                "body": "Start with three design partners who each bring one real handoff. Begin with explicit link sharing, because the sender already knows the audience and the outcome.",
-                "claims": [
-                    {
-                        "id": "c3",
-                        "text": "Three design partners, each with one real handoff.",
-                        "provenance": "stated",
-                        "visibility": "shareable"
-                    },
-                    {
-                        "id": "c4",
-                        "text": "Explicit link sharing comes before discovery or matching.",
-                        "provenance": "confirmed",
-                        "visibility": "shareable"
-                    }
-                ],
-                "version": 1,
-                "visibility": "shareable"
-            }
-        ],
-        "excluded": [
-            {
-                "topic": "Fundraising timeline",
-                "reason": "Not relevant to agreeing responsibilities; shared separately with investors."
-            },
-            {
-                "topic": "Individual partner names under discussion",
-                "reason": "Not yet approached; Jordan will propose their own list."
-            }
-        ]
-    },
-    "reasoning": {
-        "decisions": [
-            {
-                "id": "d1",
-                "question": "Who owns design-partner outreach?",
-                "status": "leaning",
-                "decider": "joint",
-                "byWhen": "Before invitations",
-                "options": [
-                    {
-                        "label": "Jordan owns outreach",
-                        "pros": [
-                            "Existing relationships",
-                            "Ana's time goes to building"
-                        ],
-                        "cons": [
-                            "Jordan is further from what actually works"
-                        ],
-                        "ownerView": {
-                            "text": "Preferred.",
-                            "provenance": "stated"
-                        }
-                    },
-                    {
-                        "label": "Ana owns outreach",
-                        "pros": [
-                            "Can demo and fix live"
-                        ],
-                        "cons": [
-                            "Engineering slips"
-                        ],
-                        "ownerView": {
-                            "text": "Fallback only.",
-                            "provenance": "stated"
-                        }
-                    }
-                ],
-                "choice": "Jordan owns outreach",
-                "rationale": {
-                    "text": "Engineering capacity is the binding constraint, and Jordan holds the relationships.",
-                    "provenance": "confirmed"
-                },
-                "criteria": [
-                    {
-                        "name": "Engineering time protected",
-                        "weight": 0.5
-                    },
-                    {
-                        "name": "Partner trust",
-                        "weight": 0.35
-                    },
-                    {
-                        "name": "Speed",
-                        "weight": 0.15
-                    }
-                ],
-                "tradeoffsAccepted": [
-                    "Jordan needs a weekly product sync to stay accurate."
-                ],
-                "reversibility": "reversible",
-                "whatWouldChangeIt": [
-                    "Jordan doesn't have capacity this month",
-                    "Partners need live technical demos"
-                ]
-            },
-            {
-                "id": "d2",
-                "question": "Which first workflow do partners try?",
-                "status": "open",
-                "decider": "joint"
-            }
-        ],
-        "variables": [
-            {
-                "name": "Number of design partners",
-                "value": "3",
-                "acceptable": "3 to 5",
-                "gate": "hard",
-                "provenance": "corrected",
-                "visibility": "shareable"
-            },
-            {
-                "name": "Responsibility split",
-                "value": "Product+eng / outreach+narrative",
-                "gate": "elastic",
-                "tradesAgainst": [
-                    "Engineering time"
-                ],
-                "provenance": "stated",
-                "visibility": "shareable"
-            },
-            {
-                "name": "Review point",
-                "value": "After first partner round",
-                "gate": "soft",
-                "provenance": "inferred",
-                "visibility": "shareable"
-            }
-        ],
-        "assumptions": [
-            {
-                "statement": "Recipients want the background and a way to ask follow-ups through their own agent.",
-                "confidence": "medium",
-                "ifWrong": "A good document plus a call is enough, and Relay's agent layer is unnecessary.",
-                "howToTest": "Compare recipient understanding with and without the agent in partner sessions.",
-                "provenance": "stated"
-            }
-        ],
-        "evidence": [
-            {
-                "supports": "c4",
-                "kind": "conversation",
-                "pointer": "Product discussion, workflow examples",
-                "strength": "weak"
-            }
-        ],
-        "risks": [
-            {
-                "risk": "The launch narrative overstates what the prototype does.",
-                "likelihood": "medium",
-                "impact": "high",
-                "mitigation": "Jordan challenges the narrative; we demo only what works."
-            }
-        ],
-        "counterarguments": [
-            {
-                "argument": "Three partners is too few to learn anything statistically.",
-                "ownerResponse": {
-                    "text": "We're looking for failure modes, not statistics. Three real handoffs will show where it breaks.",
-                    "provenance": "stated"
-                }
-            }
-        ],
-        "unknowns": [
-            {
-                "question": "Does the recipient need an agent connection at all?",
-                "whyItMatters": "Decides whether the agent layer is the product or an extra.",
-                "whoCanAnswer": "The partner sessions"
-            }
-        ]
-    },
-    "judgement": {
-        "principles": [
-            {
-                "principle": "Prefer an honest small launch to an impressive broad one.",
-                "example": "Cut matching from v1 even though it demos well."
-            },
-            {
-                "principle": "Ownership is agreed, never assigned.",
-                "example": "This whole share exists to get Jordan's agreement."
-            }
-        ],
-        "preferences": [
-            {
-                "prefer": "learning",
-                "over": "speed",
-                "when": "the decision is hard to reverse"
-            }
-        ],
-        "redLines": [
-            "No commitments to partners about features that don't work yet."
-        ],
-        "confidence": "Confident about the approach, unsure about the first workflow."
-    },
-    "process": {
-        "howProduced": [
-            {
-                "step": "Owner stated the intent in Claude",
-                "by": "owner"
-            },
-            {
-                "step": "Agent drafted from the launch notes and conversation, and asked 2 clarifying questions",
-                "by": "agent"
-            },
-            {
-                "step": "Owner corrected 1 inference and rejected 1",
-                "by": "owner"
-            },
-            {
-                "step": "Owner approved 3 fidelity checks",
-                "by": "owner"
-            }
-        ],
-        "sourcesConsulted": [
-            {
-                "name": "This conversation",
-                "kind": "conversation",
-                "consent": "not-needed"
-            },
-            {
-                "name": "Launch notes (Drive)",
-                "kind": "connector",
-                "consent": "granted",
-                "scope": "one document, read-only"
-            }
-        ],
-        "decisionProcess": "Responsibilities and the first workflow are decided jointly. Engineering scope is Ana's call. Disagreements go to a 30-minute call, not a thread.",
-        "nextSteps": [
-            {
-                "step": "Jordan reviews and suggests changes",
-                "owner": "Jordan",
-                "due": "This week"
-            },
-            {
-                "step": "Turn the decisions into an action list",
-                "owner": "Ana"
-            }
-        ]
-    },
-    "representation": {
-        "role": "explore",
-        "opening": {
-            "greeting": "I have Ana's launch plan for Navii, shared so you two can agree on responsibilities.",
-            "starters": [
-                "Walk me through the plan",
-                "What's being asked of me?",
-                "Show me the proposed split"
-            ]
-        },
-        "speaksAs": "I'm answering from the launch context Ana shared with you.",
-        "fidelity": {
-            "quoteStatedIntent": true,
-            "labelInterpretations": true,
-            "citeSections": true,
-            "extrapolation": "labelled"
-        },
-        "may": [
-            "Summarize and explain the plan",
-            "Walk through the reasoning and alternatives",
-            "Help Jordan draft their counter-proposal"
-        ],
-        "mustAskOwner": [
-            "Any change to the number of partners",
-            "Dates",
-            "Anything about engineering capacity beyond what's written"
-        ],
-        "mustNot": [
-            "Agree to a different responsibility split on Ana's behalf",
-            "Present the success criteria as measured results",
-            "Name partners"
-        ],
-        "whenUnknown": "say-unspecified-and-route",
-        "passOn": "Jordan may forward shareable sections to their team. Nothing goes to partners.",
-        "fidelityChecks": [
-            {
-                "question": "When do we launch?",
-                "approvedAnswer": "There's no external date. Invitations go out once we agree on owners and on what will work by then.",
-                "ownerEdited": true
-            },
-            {
-                "question": "Could we start with two partners?",
-                "approvedAnswer": "No. Three is Ana's minimum to see a pattern; up to five is fine.",
-                "ownerEdited": true
-            },
-            {
-                "question": "Is the split fixed?",
-                "approvedAnswer": "No. It's a proposal and needs your agreement. Ana prefers you own outreach because engineering time is the constraint.",
-                "ownerEdited": false
-            }
-        ]
-    },
-    "interaction": {
-        "permission": "suggest",
-        "returnChannel": "Relay proposals, each targeting a section id",
-        "expectedResponse": "Agreement or a counter-proposal on the split, and a pick for the first workflow, before invitations."
-    },
-    "lifecycle": {
-        "mode": "live",
-        "expiresAt": "2027-11-02T18:00:00Z",
-        "refresh": "manual",
-        "staleSections": [],
-        "grantId": "grant_7c1",
-        "revocationUrl": "https://relay.example/revoke/grant_7c1"
+        "version": 1,
+        "visibility": "shareable"
+      }
+    ],
+    "excluded": [
+      {
+        "topic": "Fundraising timeline",
+        "reason": "Not relevant to agreeing responsibilities; shared separately with investors."
+      },
+      {
+        "topic": "Individual partner names under discussion",
+        "reason": "Not yet approached; Jordan will propose their own list."
+      }
+    ]
+  },
+  "content": {
+    "page": {
+      "markdown": "# Navii launch: who owns what\n\nJordan, here's the launch plan I'd like us to agree on before partner invitations go out.\n\n## The plan\nStart with three design partners, each bringing one real handoff. Sharing starts with explicit links, since the sender already knows who it's for and why.\n\n## Proposed split\n- **Ana:** product and engineering.\n- **Jordan:** design-partner outreach, and shaping the launch story with Ana.\n\n## What I need from you\nAgree to the split or change it, and help pick the first workflow partners try. We'll set a review point once partners start."
     }
+  },
+  "reasoning": {
+    "decisions": [
+      {
+        "id": "d1",
+        "question": "Who owns design-partner outreach?",
+        "status": "leaning",
+        "decider": "joint",
+        "byWhen": "Before invitations",
+        "options": [
+          {
+            "label": "Jordan owns outreach",
+            "pros": [
+              "Existing relationships",
+              "Ana's time goes to building"
+            ],
+            "cons": [
+              "Jordan is further from what actually works"
+            ],
+            "ownerView": {
+              "text": "Preferred.",
+              "provenance": "stated"
+            }
+          },
+          {
+            "label": "Ana owns outreach",
+            "pros": [
+              "Can demo and fix live"
+            ],
+            "cons": [
+              "Engineering slips"
+            ],
+            "ownerView": {
+              "text": "Fallback only.",
+              "provenance": "stated"
+            }
+          }
+        ],
+        "choice": "Jordan owns outreach",
+        "rationale": {
+          "text": "Engineering capacity is the binding constraint, and Jordan holds the relationships.",
+          "provenance": "confirmed"
+        },
+        "criteria": [
+          {
+            "name": "Engineering time protected",
+            "weight": 0.5
+          },
+          {
+            "name": "Partner trust",
+            "weight": 0.35
+          },
+          {
+            "name": "Speed",
+            "weight": 0.15
+          }
+        ],
+        "tradeoffsAccepted": [
+          "Jordan needs a weekly product sync to stay accurate."
+        ],
+        "reversibility": "reversible",
+        "whatWouldChangeIt": [
+          "Jordan doesn't have capacity this month",
+          "Partners need live technical demos"
+        ]
+      },
+      {
+        "id": "d2",
+        "question": "Which first workflow do partners try?",
+        "status": "open",
+        "decider": "joint"
+      }
+    ],
+    "variables": [
+      {
+        "name": "Number of design partners",
+        "value": "3",
+        "acceptable": "3 to 5",
+        "gate": "hard",
+        "provenance": "corrected",
+        "visibility": "shareable"
+      },
+      {
+        "name": "Responsibility split",
+        "value": "Product+eng / outreach+narrative",
+        "gate": "elastic",
+        "tradesAgainst": [
+          "Engineering time"
+        ],
+        "provenance": "stated",
+        "visibility": "shareable"
+      },
+      {
+        "name": "Review point",
+        "value": "After first partner round",
+        "gate": "soft",
+        "provenance": "inferred",
+        "visibility": "shareable"
+      }
+    ],
+    "assumptions": [
+      {
+        "statement": "Recipients want the background and a way to ask follow-ups through their own agent.",
+        "confidence": "medium",
+        "ifWrong": "A good document plus a call is enough, and Relay's agent layer is unnecessary.",
+        "howToTest": "Compare recipient understanding with and without the agent in partner sessions.",
+        "provenance": "stated"
+      }
+    ],
+    "evidence": [
+      {
+        "supports": "c4",
+        "kind": "conversation",
+        "pointer": "Product discussion, workflow examples",
+        "strength": "weak"
+      }
+    ],
+    "risks": [
+      {
+        "risk": "The launch narrative overstates what the prototype does.",
+        "likelihood": "medium",
+        "impact": "high",
+        "mitigation": "Jordan challenges the narrative; we demo only what works."
+      }
+    ],
+    "counterarguments": [
+      {
+        "argument": "Three partners is too few to learn anything statistically.",
+        "ownerResponse": {
+          "text": "We're looking for failure modes, not statistics. Three real handoffs will show where it breaks.",
+          "provenance": "stated"
+        }
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Does the recipient need an agent connection at all?",
+        "whyItMatters": "Decides whether the agent layer is the product or an extra.",
+        "whoCanAnswer": "The partner sessions"
+      }
+    ]
+  },
+  "judgement": {
+    "principles": [
+      {
+        "principle": "Prefer an honest small launch to an impressive broad one.",
+        "example": "Cut matching from v1 even though it demos well."
+      },
+      {
+        "principle": "Ownership is agreed, never assigned.",
+        "example": "This whole share exists to get Jordan's agreement."
+      }
+    ],
+    "preferences": [
+      {
+        "prefer": "learning",
+        "over": "speed",
+        "when": "the decision is hard to reverse"
+      }
+    ],
+    "redLines": [
+      "No commitments to partners about features that don't work yet."
+    ],
+    "confidence": "Confident about the approach, unsure about the first workflow."
+  },
+  "process": {
+    "howProduced": [
+      {
+        "step": "Owner stated the intent in Claude",
+        "by": "owner"
+      },
+      {
+        "step": "Agent drafted from the launch notes and conversation, and asked 2 clarifying questions",
+        "by": "agent"
+      },
+      {
+        "step": "Owner corrected 1 inference and rejected 1",
+        "by": "owner"
+      },
+      {
+        "step": "Owner approved 3 fidelity checks",
+        "by": "owner"
+      }
+    ],
+    "sourcesConsulted": [
+      {
+        "name": "This conversation",
+        "kind": "conversation",
+        "consent": "not-needed"
+      },
+      {
+        "name": "Launch notes (Drive)",
+        "kind": "connector",
+        "consent": "granted",
+        "scope": "one document, read-only"
+      }
+    ],
+    "decisionProcess": "Responsibilities and the first workflow are decided jointly. Engineering scope is Ana's call. Disagreements go to a 30-minute call, not a thread.",
+    "nextSteps": [
+      {
+        "step": "Jordan reviews and suggests changes",
+        "owner": "Jordan",
+        "due": "This week"
+      },
+      {
+        "step": "Turn the decisions into an action list",
+        "owner": "Ana"
+      }
+    ]
+  },
+  "representation": {
+    "role": "explore",
+    "opening": {
+      "greeting": "I have Ana's launch plan for Navii, shared so you two can agree on responsibilities.",
+      "starters": [
+        "Walk me through the plan",
+        "What's being asked of me?",
+        "Show me the proposed split"
+      ]
+    },
+    "speaksAs": "I'm answering from the launch context Ana shared with you.",
+    "fidelity": {
+      "quoteStatedIntent": true,
+      "labelInterpretations": true,
+      "citeSections": true,
+      "extrapolation": "labelled"
+    },
+    "may": [
+      "Summarize and explain the plan",
+      "Walk through the reasoning and alternatives",
+      "Help Jordan draft their counter-proposal"
+    ],
+    "mustAskOwner": [
+      "Any change to the number of partners",
+      "Dates",
+      "Anything about engineering capacity beyond what's written"
+    ],
+    "mustNot": [
+      "Agree to a different responsibility split on Ana's behalf",
+      "Present the success criteria as measured results",
+      "Name partners"
+    ],
+    "whenUnknown": "say-unspecified-and-route",
+    "passOn": "Jordan may forward shareable sections to their team. Nothing goes to partners.",
+    "fidelityChecks": [
+      {
+        "question": "When do we launch?",
+        "approvedAnswer": "There's no external date. Invitations go out once we agree on owners and on what will work by then.",
+        "ownerEdited": true
+      },
+      {
+        "question": "Could we start with two partners?",
+        "approvedAnswer": "No. Three is Ana's minimum to see a pattern; up to five is fine.",
+        "ownerEdited": true
+      },
+      {
+        "question": "Is the split fixed?",
+        "approvedAnswer": "No. It's a proposal and needs your agreement. Ana prefers you own outreach because engineering time is the constraint.",
+        "ownerEdited": false
+      }
+    ]
+  },
+  "interaction": {
+    "permission": "suggest",
+    "returnChannel": "Relay proposals, each targeting a section id",
+    "expectedResponse": "Agreement or a counter-proposal on the split, and a pick for the first workflow, before invitations."
+  },
+  "lifecycle": {
+    "mode": "live",
+    "expiresAt": "2027-11-02T18:00:00Z",
+    "refresh": "manual",
+    "staleSections": [],
+    "grantId": "grant_7c1",
+    "revocationUrl": "https://relay.example/revoke/grant_7c1"
+  }
 }
